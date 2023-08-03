@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+  db:
+    image: postgres:15.3
+    container_name: server
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=seccamp
+    volumes:
+      - ./misc/sql:/docker-entrypoint-initdb.d
