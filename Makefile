@@ -1,14 +1,17 @@
-dup:
+u:
 	docker-compose up -d
 
-ddown:
-	docker-compose down
+build:
+	docker-compose build
 
-dlog:
+d:
+	docker-compose down --remove-orphans
+
+log:
 	docker-compose logs -f
 
-dps:
+ps:
 	docker-compose ps
 
-dbash:
+bash:
 	docker exec -it server bash
