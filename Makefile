@@ -15,3 +15,9 @@ ps:
 
 bash:
 	docker exec -it server bash
+
+gnode:
+	kubectl get nodes
+
+gpo:
+	kubectl get pods
